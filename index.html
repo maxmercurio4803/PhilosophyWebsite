@@ -1,0 +1,89 @@
+
+<head>
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <title>Philosophy 101</title>
+</head>
+<body>
+    <nav class="header" >
+      <span><a href="mainpage.html" class="blacklinks backgroundwhite">Philosophy 101</a></span>
+      <ul>
+        <li><a href="Saved.html" class="blacklinks backgroundwhite">Saved</a></li>
+        <li><a href="myprofile.html" class="blacklinks backgroundwhite">Profile</a></li>
+      </ul>
+    </nav>
+    <nav class="header" >
+        <ul>
+          <li><a href="ideas.html" class="blacklinks backgroundwhite">Ideas</a></li>
+          <li><a href="philosophers.html" class="blacklinks backgroundwhite">Philosophers</a></li>
+          <li><a href="index.html" class="blacklinks backgroundwhite">Discussions</a></li>
+        </ul>
+      </nav>
+    <div class="top-bar">
+        <h1>
+            Forums
+        </h1>
+    </div>
+    <div class="main">
+        <ol>
+        </ol>
+    </div>
+    <script src="data.js"></script>
+    <script>
+        console.log(threads);
+        var container = document.querySelector('ol');
+        for (let thread of threads) {
+            var html = `
+            <li class="row">
+                <a href="/thread.html?${thread.id}">
+                    <h4 class="title">
+                        ${thread.title}
+                    </h4>
+                    <div class="bottom">
+                        <p class="timestamp">
+                            ${new Date(thread.date).toLocaleString()}
+                        </p>
+                        <p class="comment-count">
+                            ${thread.comments.length} comments
+                        </p>
+                    </div>
+                </a>
+            </li>
+            `
+            container.insertAdjacentHTML('beforeend', html);
+        }
+    </script>
+    <style>
+        body {
+            margin: 10px 60px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        h1, h4, ol {
+            margin: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .top-bar {
+            background-color: rgb(126, 126, 126);
+            padding: 0 40px;
+        }
+        .main {
+            background-color: #F6F6EF;
+            padding: 10px 15px;
+        }
+        .row {
+            padding: 5px 0;
+        }
+        .bottom {
+            display: flex;
+            color: grey;
+            font-size: 12px;
+        }
+        .timestamp {
+            padding-right: 10px;
+        }
+    </style>
+</body>

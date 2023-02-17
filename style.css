@@ -18,7 +18,7 @@ p
 {
   font-size: 18px;
   color: black;
-  text-align: center;
+  text-align: left;
   font-family: courier;
 }
 
@@ -55,7 +55,7 @@ h3
 div
 {
   background-color: transparent;
-  text-align: center;
+  text-align: left;
 }
 
 span
