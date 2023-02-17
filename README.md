@@ -1,1 +1,3 @@
 # PhilosophyWebsite
+
+This website is supposed to make philosophy more accessible to newcomers. It will entail a detailed, chronological list of the history philsophy, including people, ideas, movements, etc...
