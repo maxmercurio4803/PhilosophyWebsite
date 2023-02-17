@@ -20,6 +20,8 @@ p
   color: black;
   text-align: left;
   font-family: courier;
+  padding-left: 10px;
+  word-wrap: break-word;
 }
 
 
